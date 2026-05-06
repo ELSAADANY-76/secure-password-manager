@@ -6,6 +6,7 @@ from PyQt5.QtCore import Qt, QTimer
 import sys
 sys.path.append('..')
 from generator import generate_password, check_strength
+from ml_strength import ml_check_strength
 from breach import is_breached
 from database import add_password, get_all_passwords, delete_password
 from crypto import encrypt_password, decrypt_password
@@ -93,7 +94,7 @@ class MainWindow(QWidget):
 
     def on_password_typed(self, text):
         if text:
-            strength = check_strength(text)
+            strength = ml_check_strength(text)
             self.strength_bar.update_strength(strength)
 
     def generate_password(self):
