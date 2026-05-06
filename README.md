@@ -18,7 +18,7 @@ A desktop password manager built with Python and PyQt5 that stores all passwords
 - Shows password strength with a visual indicator
 - Automatically clears clipboard after 30 seconds for security
 - Stores everything locally — no internet connection required
-
+- Uses a Random Forest ML model to analyse password strength
 ---
 
 ## Project Structure
@@ -90,6 +90,7 @@ A login window will appear. The first time you run it, enter any password — th
 |---|---|
 | PyQt5 | Desktop GUI framework |
 | PyCryptodome | AES-256-GCM encryption |
+| scikit-learn | ML-based password strength analysis |
 
 ---
 
